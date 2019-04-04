@@ -1,0 +1,23 @@
+{
+  "name": "backend_liftit_test",
+  "version": "1.0.0",
+  "description": "Backend to liftit test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsreyes/backend_liftit_test.git"
+  },
+  "author": "Javier Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsreyes/backend_liftit_test/issues"
+  },
+  "homepage": "https://github.com/jsreyes/backend_liftit_test#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
