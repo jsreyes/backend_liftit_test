@@ -14,7 +14,7 @@ let responseGoogle = {
   end_location: ''
 }
 
-var HTTP_PORT = 3500;
+var HTTP_PORT = 5000;
 
 app.listen(HTTP_PORT, () => {
   console.log("El servidor está inicializado en el puerto", HTTP_PORT);
@@ -35,6 +35,7 @@ app.get('/route', function(req, res) {
         responseGoogle.duration = (bodyJ.routes[0].legs[0].duration.text);
         responseGoogle.start_location = (bodyJ.routes[0].legs[0].start_location);
         responseGoogle.end_location = (bodyJ.routes[0].legs[0].end_location);
+        res.status(200).send(responseGoogle);
       }
     }
   });
