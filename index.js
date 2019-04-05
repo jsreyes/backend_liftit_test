@@ -10,8 +10,7 @@ app.use(bodyParser.json());
 let responseGoogle = {
   distance: '',
   duration: '',
-  start_location: '',
-  end_location: ''
+  coordenates: []
 }
 
 var HTTP_PORT = 5000;
@@ -33,8 +32,7 @@ app.get('/route', function(req, res) {
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         responseGoogle.distance = (bodyJ.routes[0].legs[0].distance.text);
         responseGoogle.duration = (bodyJ.routes[0].legs[0].duration.text);
-        responseGoogle.start_location = (bodyJ.routes[0].legs[0].start_location);
-        responseGoogle.end_location = (bodyJ.routes[0].legs[0].end_location);
+        responseGoogle.coordenates = [(bodyJ.routes[0].legs[0].start_location), (bodyJ.routes[0].legs[0].end_location)];
         res.status(200).send(responseGoogle);
       }
     }
